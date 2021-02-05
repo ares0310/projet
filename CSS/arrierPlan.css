@@ -1,0 +1,35 @@
+#i1{
+    background-image: url(../images/guitarIcon.png);
+    background-repeat: no-repeat;
+    background-position:top left;
+    background-size: 150px 100px;
+    min-height: 200px;
+    padding-left: 160px;
+    padding-right: 110px;
+    
+    
+}
+
+#i2{
+    background-image: url(../images/guitarIcon.png);
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100px;
+    min-height: 200px;
+
+    
+}
+
+#i3{
+    background-image: url(../images/guitarIcon.png);
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 150px 100px;
+    min-height: 100px;
+    padding-right: 120px;
+}
+
+/* background... s'applique sur le fond d'écran (icone guitare) 
+    min-height, padding - s'appliquent plus sur le contenu du paragraphe*/

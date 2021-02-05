@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Vie étudiante</title>
+
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="design.css" />
+  </head>
+
+  <body>
+    <a id="hautpage"></a>
+    <a href="#baspage">bas de page</a>
+    <h1>Veuillez rentrer vos données</h1>
+
+    <form>
+      <label for="fname">Nom:</label><br />
+
+      <input type="text" id="fname" name="fname" value="Raziyev" /><br />
+
+      <label for="lname">Prénom</label><br />
+
+      <input type="text" id="lname" name="lname" value="Arsen" /><br />
+
+      <p>Choisissez votre sexe:</p>
+
+      <div>
+        <label for="gender">Homme:</label>
+
+        <input
+          type="checkbox"
+          id="Mâle"
+          name="Mâle"
+          value="Mâle"
+          checked
+        /><br />
+
+        <label for="gender">Femme:</label>
+
+        <input type="checkbox" id="femme" name="femme" value="femme" />
+      </div>
+
+      <br />
+
+      <label for="age">Age:</label><br />
+
+      <input type="text" id="age" name="age" value="27" /><br />
+
+      <label for="mail">Mail:</label><br />
+
+      <input
+        type="text"
+        id="mail"
+        name="mail"
+        value="Entrez votre mail"
+      /><br />
+
+      <p>Etiez vous inscrit en 2019 ?</p>
+
+      <label for="oui">Oui</label>
+
+      <input type="radio" id="oui" name="choix" value="oui" />
+
+      <label for="non">Non</label>
+
+      <input type="radio" id="non" name="choix" value="non" />
+
+      <br />
+
+      <br />
+
+      <label for="apropos">A propos de vous</label><br />
+
+      <textarea id="apropos" name="apropos" rows="5" cols="50">
+
+        
+
+Quelques mots sur vos intérêts</textarea
+      >
+
+      <br />
+
+      <label for="universite">Choisissez votre université</label>
+
+      <select name="universites" id="universites">
+        <option value="Lille3">Université Lille 3</option>
+
+        <option value="Lille2">Université Lille 2</option>
+
+        <option value="Lille1">Université Lille 1</option></select
+      ><br />
+
+      <input type="Submit" value="Valider" />
+    </form>
+
+    <br />
+
+    <h2>Etudiants déjà inscrits</h2>
+    <div>
+      <img src="image/workplace.jpg" />
+      <p>
+        Traduit de l'anglais-Workplace est une plate-forme de connectivité
+        d'entreprise<br />
+        développée par Facebook, Inc. et comprend l'utilisation de groupes,<br />
+        la messagerie instantanée et un fil d'actualité. Le développement est
+        dirigé <br />par Julien Codorniou, vice-président Workplace, et
+        Karandeep Anand, responsable Workplace.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="4">The table header</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+
+    <table>
+      <tr>
+        <td>nom</td>
+
+        <td>prénom</td>
+
+        <td>age</td>
+
+        <td>mail</td>
+      </tr>
+
+      <tr>
+        <td>Five</td>
+
+        <th>John</th>
+
+        <th>27</th>
+
+        <th>johnfive@gmail.com</th>
+      </tr>
+
+      <tr>
+        <th>Marlon</th>
+
+        <th>Diogo</th>
+
+        <th>26</th>
+
+        <th>Diogo.marlon@gmail.com</th>
+      </tr>
+    </table>
+
+    <br />
+
+    <div>
+      <h2>A propos de l'AFPA</h2>
+
+      <p>
+        Depuis plus de 65 ans, l'Afpa est le premier organisme de formation
+        professionnelle qualifiante. <br />
+
+        Sa mission première n'a pas changé : vous former à l'emploi. Créée en
+        1949 pour répondre aux besoins de la France<br />
+
+        en pleine reconstruction, l'Association nationale pour la formation
+        professionnelle des adultes<br />
+
+        est depuis le 1er janvier 2017 Agence nationale pour la formation
+        professionnelle des adultes.
+      </p>
+
+      <a href="https://www.afpa.fr/">Visitez le site de l'afpa</a>
+
+      <h2>Photo de classe 2019</h2>
+
+      <img src="étudiant.jpg" />
+    </div>
+
+    <h1>The iframe element</h1>
+    <iframe
+      src="https://www.google.fr/"
+      title="Retrouvez nous sur google"
+    ></iframe>
+
+    <h2>Votre inscription est presque terminée</h2>
+    <label for="file">Downloading process:</label>
+    <progress id="file" value="75" max="100">75%</progress>
+    <h2>Vous aurez besoin de:</h2>
+    <img
+      src="image/workplace.jpg"
+      alt="Workplace"
+      usemap="workmap"
+      width="400"
+      height="379"
+    />
+
+    <map name="workmap">
+      <area
+        shape="rect"
+        coords="35, 45, 271, 355"
+        alt="Computer"
+        href="computer.htm"
+      />
+      <area
+        shape="rect"
+        coords="295, 173, 333, 250"
+        alt="Phone"
+        href="phone.htm"
+      />
+      <area
+        shape="rect"
+        coords="337, 300, 44"
+        alt="Cup of coffee"
+        href="coffee.htm"
+      />
+    </map>
+    <div>
+      <adress>
+        <br />
+
+        Ecrit par <a href="mailto:afpa@afpa.fr">l'Afpa</a><br />
+
+        Notre adresse:<br />
+
+        55, rue de l'afpa<br />
+
+        59999 AFPA<br />
+
+        France
+      </adress>
+    </div>
+    <p>
+      <small>site réalisé par <b>Arsen Raziyev</b></small>
+      <a id="baspage"></a>
+      <br />
+      <a href="#hautpage">haut de page</a>
+    </p>
+  </body>
+</html>

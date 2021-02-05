@@ -1,0 +1,12 @@
+section{
+    border:1px solid red;
+}
+
+.aside{
+    border: 2px solid black;
+}
+
+main{border: 2px solid green;
+    height:200px;
+}
+

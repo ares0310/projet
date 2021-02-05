@@ -1,0 +1,36 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../images/guitarcentersunset.jpg);
+    background-attachment:fixed;
+}
+
+.container{
+    /* display flex = permet d'avoir case horizontales, fl dir = de gauche à droite */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    
+    
+}
+
+.par1{
+    border: 2px solid black;
+    background-color: lightgray;
+    min-height: 80%;
+    min-height: 200px;
+    max-width: 300px;
+    order: 5;
+    padding: 20px;
+
+}
+
+p{
+    
+}
+
+
+h1{
+    font-size: 5vw;
+    color: white
+}

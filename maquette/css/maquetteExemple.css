@@ -1,0 +1,12 @@
+.ligne1 div:first-child{
+    background-color: cyan;
+}
+
+
+aside{
+    width: 20%;
+    height: 500px;
+    border: 2px solid blue;
+}
+
+main section{width: 60%}

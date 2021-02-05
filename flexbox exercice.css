@@ -1,0 +1,59 @@
+#gauche {
+    background-color: brown;
+    border: 1px solid red;
+    min-height: 200px;
+    width:20%;
+    float:left;
+}
+
+div{
+    border:2px solid black;
+}
+
+#liste1{
+    border: 2px solid yellow;
+    min-width: 80px;
+}
+
+#image1{
+    border: 2px solid green;
+}
+
+main{
+    background-color: lightgray;
+}
+
+#droite{
+    background-color: cyan;
+    border: 1px solid red;
+    min-height: 200px;
+    width: 20%;
+    float:right;
+}
+
+#tete{
+    position: center;
+}
+
+footer {
+    background-color: darkblue;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+}
+
+header {
+    text-align: center;
+    background-color: darkgray;
+    padding: 80px;
+}
+.coeurPage{
+    display: flex;
+    
+    
+}
+main div{
+    width: 60%;
+    flex-direction: row;
+}

@@ -1,0 +1,37 @@
+body {
+    background-color: lightcyan;
+}
+
+h1{
+    text-align: center
+}
+
+p{
+    margin: 20 px
+
+}
+
+table {
+    border-collapse: collapse
+}
+
+td{
+    
+    border: 2px solid black;
+    padding: 10 px;
+}
+
+th{
+    border: 1px black;
+    padding: 10 px;
+
+}
+
+.div1{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    border: 2px solid green;
+
+}

@@ -1,0 +1,61 @@
+body {
+  background-image: url(../images/guitarcentersunset.jpg);
+  background-attachment: fixed;
+  margin: 100px;
+  padding: 100px;
+}
+h1 {
+  color: white;
+  background-color: rgba(250, 152, 168, 0.8);
+
+}
+
+div{
+    border: 10px solid red
+}
+
+#div1 {
+  border: 10px solid black;
+  padding: 10px;
+}
+
+#prg1 {
+  background-color: rgb(255, 99, 71);
+}
+#prg2 {
+  background-color: rgba(255, 99, 71, 0.8);
+}
+
+p {
+  margin: 20px;
+  padding: 10px;
+  background: red;
+  color: white;
+}
+
+#p3 {
+  background-color: #fa5538;
+}
+
+.pbleu {
+  background: rgb(29, 29, 241, 0.8);
+}
+
+.image1 {
+  border: 2px dashed black;
+  width: 100 px;
+  height: 100 px;
+}
+
+.cadreglobal {
+  border: 1px solid black;
+  width: 800px;
+  height: 250px;
+}
+
+.p1,
+.p2 {
+  margin: 100 px;
+  padding: 50px;
+  color: white;
+}
