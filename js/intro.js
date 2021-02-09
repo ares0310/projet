@@ -39,13 +39,11 @@ console.log(y)*/
 
 //   console.log(person.fullName())
 
-
 //   function afficherMessage() {
 //       console.log("un message");
 // }
 
 // afficherMessage()
-
 
 // function somme (a,b)
 // {
@@ -56,7 +54,6 @@ console.log(y)*/
 
 // somme(6,12)
 
-
 // function somme1 (a,b)
 // {return (a + b);
 // }
@@ -65,8 +62,6 @@ console.log(y)*/
 // x = somme1(5, 6545);
 
 // console.log(x)
-
-
 
 // function somme2(a,b)
 // {
@@ -100,32 +95,117 @@ console.log(y)*/
 
 // console.log(l)
 
-function difference(a,b)
-    {
-        return(a == b);
-    }
+function difference(a, b) {
+  return a == b;
+}
 
-console.log(difference(40,10));
+console.log(difference(40, 10));
 
 let chaine2;
 chaine2 = "";
 console.log(chaine2);
 
-
-let j;
-j = 0;
-let u;
-u ="";
-while (j <= 9){
-    u += "*"
-    j++;
-    console.log(u)
+let j = 0;
+let u = "";
+while (j <= 9) {
+  u += "*";
+  j++;
+  console.log(u);
 }
 
-console.log(1==="1")
+// console.log(1 === "1");
 
-let a = 15;
-let b = 10;
-a<b ? x ="inferieur" : x ="superieur"
+// ressemble a condition ----> ternaire
+// let a = 15;
+// let b = 10;
+// a < b ? (x = "inferieur") : (x = "superieur");
 
-console.log(x)
+// console.log(x);
+
+// Condition
+
+// if (condition) {
+//     // traitement
+// }
+
+// else (condition) {
+//     //traitement
+// }
+
+// let hour = 19;
+// let salutation = "";
+// if (hour < 18) {
+//     salutation = "Bonjour";
+// } else {
+//     salutation = "Bonsoir";
+// }
+// console.log(salutation)
+
+function salutation2(hour) {
+  let salutation = "";
+  if (hour < 18) {
+    salutation = "Bonjour";
+  } else {
+    salutation = "Bonsoir";
+  }
+  console.log(salutation);
+}
+
+salutation2(19);
+
+let number1 = 6;
+switch (number1) {
+  case 1:
+    console.log("The number is 1");
+    break;
+  case 2:
+    console.log("The number is 2");
+    break;
+  default:
+    console.log("The number is undefined");
+}
+
+
+function age(annee) {
+  let number2 = "";
+  if (annee <= 10) {
+    number2 = "kid";
+  } else if (annee <= 15) {
+    number2 = "teen";
+  } else if (annee <= 20) {
+    number2 = "young";
+  } else if (annee <= 45) {
+    number2 = "adult";
+  } else {
+    number2= "senior";
+  }
+  console.log(number2)
+}
+
+age(16)
+
+
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+    str = str + "*";
+    console.log(str);
+}
+
+
+function ageSwitch(ans) {
+    let message = "";
+    switch (true){
+        case (ans < 10):
+            message = "kid";
+            break;
+        case (ans < 18):
+            message = "teen";
+            break;
+        default:
+            message = "old";
+    }
+    console.log(message)
+    return message;
+}
+ageSwitch(45)
