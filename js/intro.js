@@ -95,23 +95,23 @@ console.log(y)*/
 
 // console.log(l)
 
-function difference(a, b) {
-  return a == b;
-}
+// function difference(a, b) {
+//   return a == b;
+// }
 
-console.log(difference(40, 10));
+// console.log(difference(40, 10));
 
-let chaine2;
-chaine2 = "";
-console.log(chaine2);
+// let chaine2;
+// chaine2 = "";
+// console.log(chaine2);
 
-let j = 0;
-let u = "";
-while (j <= 9) {
-  u += "*";
-  j++;
-  console.log(u);
-}
+// let j = 0;
+// let u = "";
+// while (j <= 9) {
+//   u += "*";
+//   j++;
+//   console.log(u);
+// }
 
 // console.log(1 === "1");
 
@@ -141,71 +141,177 @@ while (j <= 9) {
 // }
 // console.log(salutation)
 
-function salutation2(hour) {
-  let salutation = "";
-  if (hour < 18) {
-    salutation = "Bonjour";
-  } else {
-    salutation = "Bonsoir";
-  }
-  console.log(salutation);
-}
+// function salutation2(hour) {
+//   let salutation = "";
+//   if (hour < 18) {
+//     salutation = "Bonjour";
+//   } else {
+//     salutation = "Bonsoir";
+//   }
+//   console.log(salutation);
+// }
 
-salutation2(19);
+// salutation2(19);
 
-let number1 = 6;
-switch (number1) {
-  case 1:
-    console.log("The number is 1");
-    break;
-  case 2:
-    console.log("The number is 2");
-    break;
-  default:
-    console.log("The number is undefined");
-}
+// let number1 = 6;
+// switch (number1) {
+//   case 1:
+//     console.log("The number is 1");
+//     break;
+//   case 2:
+//     console.log("The number is 2");
+//     break;
+//   default:
+//     console.log("The number is undefined");
+// }
+
+// function age(annee) {
+//   let number2 = "";
+//   if (annee <= 10) {
+//     number2 = "kid";
+//   } else if (annee <= 15) {
+//     number2 = "teen";
+//   } else if (annee <= 20) {
+//     number2 = "young";
+//   } else if (annee <= 45) {
+//     number2 = "adult";
+//   } else {
+//     number2= "senior";
+//   }
+//   console.log(number2)
+// }
+
+// age(16)
+
+// let str = "";
+// let result = "";
+// for (let i = 0; i < 9; i++) {
+//     str = str + "*";
+//     result += str + "\n";
+// }
+// console.log(result)
 
 
-function age(annee) {
-  let number2 = "";
-  if (annee <= 10) {
-    number2 = "kid";
-  } else if (annee <= 15) {
-    number2 = "teen";
-  } else if (annee <= 20) {
-    number2 = "young";
-  } else if (annee <= 45) {
-    number2 = "adult";
-  } else {
-    number2= "senior";
-  }
-  console.log(number2)
-}
-
-age(16)
-
-
-let str = "";
-
-for (let i = 0; i < 9; i++) {
-    str = str + "*";
-    console.log(str);
-}
+// function ageSwitch(ans) { 
+//     let message = "";
+//     switch (true){       // cas particulier
+//         case (ans < 10):
+//             message = "kid";
+//             break;
+//         case (ans < 18):
+//             message = "teen";
+//             break;
+//         default:
+//             message = "old";
+//     }
+//     console.log(message)
+//     return message;
+// }
+// ageSwitch(45)
 
 
-function ageSwitch(ans) {
-    let message = "";
-    switch (true){
-        case (ans < 10):
-            message = "kid";
-            break;
-        case (ans < 18):
-            message = "teen";
-            break;
-        default:
-            message = "old";
-    }
-    console.log(message)
-    return message;
-}
-ageSwitch(45)
+// var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];     // exemple sur w3school
+// var text = "";
+// var i;
+// for (i = 0; i < cars.length; i++) {
+//   text += cars[i] + "<br>";
+// }
+
+// function entiers(tab) {
+//   var num1;
+//   var text1 = "";
+//   for (num1 = 0; num1 < tab.length; num1++) {
+//     text1 += "K-" + tab[num1] + "\n"; 
+//   }
+//   return text1;
+// }
+// let tab1 = [1,2,3,4,5,6,7,8,9,10];
+// console.log(entiers(tab1));
+
+
+// break / continue 
+// var text = "";
+// var i;
+// for (i = 0; i < 10; i++) {
+//   if (i === 3) { continue; } // on peut remplacer par break
+//   text += "The number is " + i + "\n";
+// }
+// console.log(text)
+
+// var text = "";
+// var i = 0;
+// while (i < 10) {
+//   text += "<br>The number is " + i;
+//   i++;
+// }
+
+// function tableau1(tab) {
+//   var i;
+//   let message = "";
+//   for (i = 0; i < tab.length; i++) {
+//     if (tab[i] === "non") {continue; }
+//     message += tab[i] + " ";
+//   }
+//   return message;
+// }
+
+// let tab1 = ["oui", "haha", "lol", "xD", "non", "ici", "mdr"]
+
+// console.log(tableau1(tab1))
+
+
+
+
+
+// function tableau2(tab) {
+//   var i = 0;
+//   let message = "";
+//   while (i < tab.length) {
+//     if (tab[i] === "non") {i++; continue; } // --> i++ important pour que la condition s'exécute en boucle
+//     message += tab[i] + " ";
+//     i++;
+//   }
+//   return message;
+// }
+
+// console.log(tableau2(tab1))
+
+// function tableau3(tab) {
+//   var i = 0;
+//   let message = "";
+//   while (i < tab.length) {
+//     message += tab[i] + " ";
+//     i++;
+//   }
+//   return message;
+// }
+
+// console.log(tableau3(tab1))
+
+
+// AUTRE SOLUTION (moins fiable)
+// function tableau2(tab) {
+//   var i = -1;
+//   let message = "";
+//   while (i < tab.length -1) {
+//     i++;
+//     if (tab[i] === "non") { continue; } // --> i++ important pour que la condition s'exécute en boucle
+//     message += tab[i] + " ";
+//   }
+//   return message;
+// }
+
+// console.log(tableau2(tab1))
+
+let tab = ["a", "b", "c", "d", "e"];
+tab[0] = "z";
+
+console.log(tab)
+
+console.log(tab.length)
+
+tab.sort();
+console.log(tab);
+
+let tab1 = tab[tab.length - 1];
+console.log(tab1)

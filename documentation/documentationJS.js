@@ -20,7 +20,6 @@
 
 
 //Condition
-
 // if () {
 // } else (){
 // }
@@ -30,7 +29,7 @@
 // else
 
 // Condition dans fonction
-// function var1(par1){
+// function var1(par1){ -----> (parametre sert à appliquer la même fonction avec une autre valeur)
 //     let var2 = "";
 //     if(par1 <= 10){
 //         var2 = "premiere";
@@ -48,3 +47,21 @@
 
 // Switch dans function
 // case, break, default
+
+// for loop
+// [] --> tableau commence à être compté à partir de 0. 
+// lors des fonctions, ne jamais oublier le "return" entre les deux derniers }}
+
+// for / in -- parcours tout le tableau sans condition
+// ex: var person = {} --> objet
+
+// JS break - continue
+// break - quitte la boucle quand une condition est atteinte
+// continue - continue la boucle, mais saute l'ittération
+
+// while loop
+// le compteur, il faut le mettre à la main, pas comme dans for
+
+// array 
+// myArray = ["a", "b", "c"]; ---- 3 elements, indexé de 0 à 2.
+
