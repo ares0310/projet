@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">    <!-- dépendance-->
+    <link rel="stylesheet" href="css/all.min.css">          <!-- dépendance-->
+    
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1 onclick="hideH1()">H1</h1>
+    <h2>H2</h2>
+    <ul>
+        <li>a</li>
+        <li id="liB">b</li>
+        <li>c</li>
+        <li class="cacher">d</li>
+        <li >e</li>
+    </ul>
+    <button type = "button" class="btn btn-dark btn-lg" onclick="hideLi1()">BOUTON A</button>
+    <button type = "button" class="btn btn-warning btn-lg" onclick="hideLiB()">BOUTON B</button>
+    <button type = "button" class="btn btn-warning btn-lg btn-danger" onclick="hideLiClasse()">CACHER LI CLASSE</button>
+
+    
+    <script src="js/bootstrap.bundle.min.js"></script>  <!-- dépendance les plus utilisés-->
+    <script src="js/jquery-3.5.1.min.js"></script>      <!-- dépendance-->
+    <script src="js/all.min.js"></script>               <!-- dépendance-->
+    
+    <script>
+        // function hideH1() {
+        //     $("h1").hide();
+        // };
+        function hideLi1(){
+            $("ul li:first").hide(200);
+        };
+        function hideLiB(){
+            $("#liB").toggle(200);
+        }
+        function hideLiClasse(){
+            $(".cacher").hide();
+                
+        }
+    </script>
+  </body>
+</html>
