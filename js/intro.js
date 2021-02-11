@@ -315,3 +315,10 @@ console.log(tab);
 
 let tab1 = tab[tab.length - 1];
 console.log(tab1)
+
+let points = [4,95,87,16,12]
+ 
+console.log(Math.max(4,95,87,16,12))
+
+let date1 = new Date();
+console.log(date1.getMonth()+1) // - index de 0 à 11 (mois)

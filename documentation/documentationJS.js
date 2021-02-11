@@ -64,4 +64,15 @@
 
 // array 
 // myArray = ["a", "b", "c"]; ---- 3 elements, indexé de 0 à 2.
+// tab[4] --> affiche 5ème élément avec index 4
 
+// method JS ARRAY
+// toString() --> affiche array en string
+// pop() --> supprime element
+// push() --> ajoute en dernier
+// shift() --> ajoute en premier
+
+
+// date ----> yyyy - mm - dd (format standard)
+// set - ajuste - change date
+// get - récupère - montre la date actuelle
