@@ -15,11 +15,11 @@
   </head>
   <body>
     <h1 onclick="hideH1()">H1</h1>
-    <h2>H2</h2>
+    <h2 id = "H2" onclick="animateH2()" class="border col-md-1">H2</h2>
     <ul>
       <li>a</li>
       <li id="liB">b</li>
-      <li>c</li>
+      <li >c</li>
       <li class="cacher">d</li>
       <li>e</li>
     </ul>
@@ -36,7 +36,7 @@
     >
       CACHER LI CLASSE
     </button>
-
+    <button type="button" id="buttonD" class="btn btn-warning btn-lg" onclick="animateH2()">BOUTON D</button>
     <script src="js/jquery-3.5.1.min.js"></script>
     <!-- dépendance-->
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -48,21 +48,26 @@
       // function hideH1() {
       //     $("h1").hide();
       // };
-      $(document).ready(function () {
-        $("h1").click(function(){
-          alert("h1 va disparaitre");
-          $(this).hide();
-        });
-      });
-      function hideLi1() {
-        $("ul li:first").hide(200);
-      }
-      function hideLiB() {
-        $("#liB").toggle(200);
-      }
-      function hideLiClasse() {
-        $(".cacher").hide();
-      }
+      // $(document).ready(function () {
+      //   $("h1").click(function(){
+      //     alert("h1 va disparaitre");
+      //     $(this).hide();
+      //   });
+      // });
+      // function hideLi1() {
+      //   $("ul li:first").hide(200);
+      // }
+      // function hideLiB() {
+      //   $("#liB").toggle(200);
+      // }
+      // function hideLiClasse() {
+      //   $(".cacher").hide();
+      // }
+      function animateH2(){
+        $("#buttonD").click(function(){
+          $("#H2").animate({left: "250px"})
+        })
+      };
       
     </script>
   </body>
