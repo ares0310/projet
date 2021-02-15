@@ -303,22 +303,52 @@ console.log(y)*/
 
 // console.log(tableau2(tab1))
 
-let tab = ["a", "b", "c", "d", "e"];
-tab[0] = "z";
+// let tab = ["a", "b", "c", "d", "e"];
+// tab[0] = "z";
 
-console.log(tab)
+// console.log(tab)
 
-console.log(tab.length)
+// console.log(tab.length)
 
-tab.sort();
-console.log(tab);
+// tab.sort();
+// console.log(tab);
 
-let tab1 = tab[tab.length - 1];
-console.log(tab1)
+// let tab1 = tab[tab.length - 1];
+// console.log(tab1)
 
-let points = [4,95,87,16,12]
+// let points = [4,95,87,16,12]
  
-console.log(Math.max(4,95,87,16,12))
+// console.log(Math.max(4,95,87,16,12))
 
-let date1 = new Date();
-console.log(date1.getMonth()+1) // - index de 0 à 11 (mois)
+// let date1 = new Date();
+// console.log(date1.getMonth()+1) // - index de 0 à 11 (mois)
+
+tab1 = [ 5, 16, 12, 7, 13, 6, 8]
+
+function moyenne(tab){
+    let somme = 0;
+    let i;
+    for(i = 0; i < tab.length; i++){
+        somme = somme + tab[i]
+    }
+    return (somme / tab.length);            // --->>> return, toujours avant la derniere accolade
+}
+
+
+
+console.log(moyenne(tab1))
+
+
+function maximum(tab){
+    let maxi = 0;
+    for (i=0; i < tab.length; i++){
+        if (tab[i] > maxi) {
+            maxi = tab[i];
+        }
+    }
+    return maxi                             // -->>>>> return, toujours avant la derniere accolade
+}
+console.log(maximum(tab1))
+
+
+
