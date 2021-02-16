@@ -329,6 +329,31 @@ console.log(y)*/
 // let tab1 = [16, 12, 8, 7, 3, 12];
 // console.log(moyenne(tab1));
 
+// function moyenne(tab){
+//   let somme = 0;
+//   let i;
+//   for(i = 0; i < tab.length; i++){
+//       somme = somme + tab[i]
+//   }
+//   return (somme / tab.length);            // --->>> return, toujours avant la derniere accolade
+// }
+
+
+
+// console.log(moyenne(tab1))
+
+
+// function maximum(tab){
+//   let maxi = 0;
+//   for (i=0; i < tab.length; i++){
+//       if (tab[i] > maxi) {
+//           maxi = tab[i];
+//       }
+//   }
+//   return maxi                             // -->>>>> return, toujours avant la derniere accolade
+// }
+// console.log(maximum(tab1))
+
 let tab2 = [18, 2, 14, 11, 8, 13, 8];
 
 
@@ -416,3 +441,43 @@ function jours(mois, annee) {
 
 console.log(jours(2, 2020))
 
+tab1 = [ 5, 16, 12, 7, 13, 6, 8]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FREECODECAMP
+// Objets: 
+
+// let dog = {
+//   "name": "Rex",                 -----> (:) pour designer des proprietes a linterieur de lobjet
+//   "friends": ["me", "food"]      ------>: array peut etre cree a linterieur de lobjet
+// }
+
+// Pour acceder dans proprietes d'un objet
+// 2 manieres de faire = 
+// 1) .
+// 2) []
