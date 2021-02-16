@@ -76,3 +76,51 @@
 // date ----> yyyy - mm - dd (format standard)
 // set - ajuste - change date
 // get - récupère - montre la date actuelle
+
+
+
+
+
+    // 15.02.21 depuis dossier partage
+/* <h1>Mon H1 <b>est en gras</b></h1>
+    <h2>Mon H2</h2>
+
+    <button onclick="modifTexteH1()">changer le texte du H1</button>
+    <button onclick="modifHtmlH1()">changer le HTML du H1</button>
+    <button onclick="hidebouton()">cacher le Bouton</button>
+    
+    <h3>A demonstration of the :in-range selector.</h3>
+    <form onsubmit="valid()">
+      <input type="number" required />
+      <input type="submit" value="valider" />
+    </form>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+
+    <script>
+      function modifTexteH1() {
+        $("h1").text("texte du H1 changé");
+      }
+
+      function modifHtmlH1() {
+        $("h1").html("<p>html du H1 changé </p>");
+        alert($("h1").html());
+      }
+      function valid() {
+        alert($("input[type=number]").val());
+      }
+
+      $(document).ready(function () {
+        $("h1").click(function () {
+          alert("h1 va disparaitre");
+          $(this).hide();
+        });
+      });
+
+      function hidebouton() {
+        let bouton = $("button");
+        console.log($(this));
+      }
+    </script> */

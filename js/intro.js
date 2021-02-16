@@ -191,8 +191,7 @@ console.log(y)*/
 // }
 // console.log(result)
 
-
-// function ageSwitch(ans) { 
+// function ageSwitch(ans) {
 //     let message = "";
 //     switch (true){       // cas particulier
 //         case (ans < 10):
@@ -209,7 +208,6 @@ console.log(y)*/
 // }
 // ageSwitch(45)
 
-
 // var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];     // exemple sur w3school
 // var text = "";
 // var i;
@@ -221,15 +219,14 @@ console.log(y)*/
 //   var num1;
 //   var text1 = "";
 //   for (num1 = 0; num1 < tab.length; num1++) {
-//     text1 += "K-" + tab[num1] + "\n"; 
+//     text1 += "K-" + tab[num1] + "\n";
 //   }
 //   return text1;
 // }
 // let tab1 = [1,2,3,4,5,6,7,8,9,10];
 // console.log(entiers(tab1));
 
-
-// break / continue 
+// break / continue
 // var text = "";
 // var i;
 // for (i = 0; i < 10; i++) {
@@ -259,10 +256,6 @@ console.log(y)*/
 
 // console.log(tableau1(tab1))
 
-
-
-
-
 // function tableau2(tab) {
 //   var i = 0;
 //   let message = "";
@@ -288,7 +281,6 @@ console.log(y)*/
 
 // console.log(tableau3(tab1))
 
-
 // AUTRE SOLUTION (moins fiable)
 // function tableau2(tab) {
 //   var i = -1;
@@ -303,22 +295,124 @@ console.log(y)*/
 
 // console.log(tableau2(tab1))
 
-let tab = ["a", "b", "c", "d", "e"];
-tab[0] = "z";
+// let tab = ["a", "b", "c", "d", "e"];
+// tab[0] = "z";
 
-console.log(tab)
+// console.log(tab)
 
-console.log(tab.length)
+// console.log(tab.length)
 
-tab.sort();
-console.log(tab);
+// tab.sort();
+// console.log(tab);
 
-let tab1 = tab[tab.length - 1];
-console.log(tab1)
+// let tab1 = tab[tab.length - 1];
+// console.log(tab1)
 
-let points = [4,95,87,16,12]
- 
-console.log(Math.max(4,95,87,16,12))
+// let points = [4,95,87,16,12]
 
-let date1 = new Date();
-console.log(date1.getMonth()+1) // - index de 0 à 11 (mois)
+// console.log(Math.max(4,95,87,16,12))
+
+// let date1 = new Date();
+// console.log(date1.getMonth()+1) // - index de 0 à 11 (mois)
+
+// function moyenne(tab) {
+//   if (tab.length === 0) {
+//     return 0;
+//   }
+//   let i;
+//   let somme = 0;
+//   for (i = 0; i < tab.length; i++) {
+//     somme = somme + tab[i];
+//   }
+//   return somme / tab.length;
+// }
+// let tab1 = [16, 12, 8, 7, 3, 12];
+// console.log(moyenne(tab1));
+
+let tab2 = [18, 2, 14, 11, 8, 13, 8];
+
+
+
+// trouver la moyenne
+// function moyenne2(tab) {
+//   let result = 0;
+//   let n = 0;
+//   while (n < tab.length) {
+//     result += tab[n];
+//     n++;
+//   }
+//   return result / tab.length;
+// }
+
+// console.log(moyenne2(tab2 ));
+
+// trouver plus grand nombre
+// function highestNum(tab) {
+//     let maximum = 0;
+//     for (i=0; i < tab.length; i++){
+//         if (tab[i] > maximum) {
+//             maximum = tab[i];
+//         }
+//     }
+//     return maximum
+// }
+// console.log(highestNum(tab2))
+
+// function highestNum(tab) {
+//     let maximum = 0;
+//     for (i=0; val = tab[i]; i++){
+//         if (val > maximum) {
+//             maximum = val;
+//         }
+//     }
+//     return maximum
+// }
+// console.log(highestNum(tab2))
+
+//BONNE METHODE
+// function position(tab, a) {
+//   for (i=0; i < tab.length; i++){
+//     if (tab[i] == a){
+//       return i + 1;               // --- >>>> compteur (i) suffit car compte deja la poisition, +1 renvoie la position algo.
+
+//     }
+//   }
+// }
+
+// MA MANIERE DE TROUVER POSITION/INDEX avec fonction predefini indexOf
+// function position(tab, a) {
+//   let pos1;
+//   for (i=0; i < tab.length; i++){
+//     if (tab[i] == a){
+//       pos1 = tab.indexOf(a);
+//     }
+//   }
+//   return pos1
+// }
+// console.log("l'index numero ", position(tab2, 11))
+
+// function indexPosition(tab, a) {
+//   let i = 0;
+//   while (i < tab.length) {
+//     if (tab[i] == a){
+//       return i + 1;
+//     }
+//     i++;                                // ----------> derniere instruction du while
+//   }
+// }
+// console.log(indexPosition(tab2, 11))
+
+
+
+function jours(mois, annee) {
+  if (annee % 4 == 0 || annee % 400 == 0) {
+    return 29
+
+  }
+  let month = [31,28,31,30,31,30,31,31,30,31,30,31]
+  return (month[mois-1]) 
+
+}
+
+console.log(jours(2, 2020))
+
