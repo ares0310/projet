@@ -338,10 +338,7 @@ console.log(y)*/
 //   return (somme / tab.length);            // --->>> return, toujours avant la derniere accolade
 // }
 
-
-
 // console.log(moyenne(tab1))
-
 
 // function maximum(tab){
 //   let maxi = 0;
@@ -355,8 +352,6 @@ console.log(y)*/
 // console.log(maximum(tab1))
 
 let tab2 = [18, 2, 14, 11, 8, 13, 8];
-
-
 
 // trouver la moyenne
 // function moyenne2(tab) {
@@ -429,38 +424,139 @@ let tab2 = [18, 2, 14, 11, 8, 13, 8];
 
 
 
-function jours(mois, annee) {
-  if (annee % 4 == 0 || annee % 400 == 0) {
-    return 29
+// ANNEE BISSEXTILE
 
+// function jours(mois, annee) {
+//   if (mois == 2) {
+//     if ((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0) {
+//       return 29;
+//     }
+//   }
+//   let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+//   return month[mois - 1];
+// }
+// console.log(jours(3, 2001));
+
+// tab1 = [5, 16, 12, 7, 13, 6, 8];
+
+
+// VERSION LONGUE MOIS et ANNEE BISSEXTILE
+// function jourAnnee(mois, annee) {
+//   let days = 0;
+//     switch(mois){
+//       case 1:
+//       case 3:
+//       case 5:
+//       case 7:
+//       case 8:
+//       case 10:
+//       case 12:
+//         days = 31;
+//         return days;            // return remplace le break; sinon return fait deja le boulot
+//       case 4:
+//       case 6:
+//       case 9:
+//       case 11:
+//         days = 30;
+//         return days;            // return remplace le break; sinon return fait deja le boulot
+//       case 2:
+//         if ((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0) {
+//         days = 29;
+//         return days;
+//         }
+        
+//         return 28;
+//   }
+//   return days;
+// }
+// console.log(jourAnnee(2, 1995))
+
+// // VERSION COURTE
+// function daysYear(mois, annee) {
+//   let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+//   switch (true) {
+//     case true:
+//       annee % 4 == 0 && annee % 100 != 0 || annee % 400 == 0
+//       return 29; 
+//     default:
+//       return month[mois]
+//   }
+// }
+// console.log(daysYear(3,2000))
+
+
+// INVERSER CHAINE DE CARACTERE
+// function inversement(chaine){
+//   let ch = "";
+//   for (i=chaine.length-1; i >= 0; i--) { 
+//     ch += chaine[i];
+//   }
+//   return ch; 
+// }
+// console.log(inversement("abcd"))
+
+// COMPTER NOMBRE DE MOTS DANS CH DE CARACTERE
+function nbMots(mot) {
+  let nb = 0;
+  for (i = 0; i < mot.length; i++) {
+    if (mot[i] == " ") {
+      nb+=1
+    }
   }
-  let month = [31,28,31,30,31,30,31,31,30,31,30,31]
-  return (month[mois-1]) 
-
+  return nb + 1;
 }
-
-console.log(jours(2, 2020))
-
-tab1 = [ 5, 16, 12, 7, 13, 6, 8]
+console.log(nbMots("je suis la"))
 
 
 
-
-
-
+function nbMotsSplit(mot) {
+  return mot.split(" ").length;
+}
+console.log(nbMotsSplit("je suis ici"))
 
 
 
 
+// COMPARAISON DE DEUX PHRASES --- FONCTION DANS FONCTION 
+// function comparePhrase(mot1, mot2) {
+//   let comp = "";
+//   if (nbMots(mot1) > nbMots(mot2)) {
+//     comp = "phrase1 est plus grande"
+//   } else if (nbMots(mot1) == nbMots(mot2)){
+//     comp = "les 2 phrases sont égales"
+//   } else {
+//     comp = "la phrase 2 est plus grande"
+//   }
+//   return comp;
+// }
+// console.log(comparePhrase("je suis la", "kk ll kk non"))
+
+
+//COMPARAISON DE DEUX PHRASES -- FONCTION DANS FONCTION --- PLUS SIMPLE
+function compPhrase(mot1, mot2) {
+  if (nbMots(mot1) == nbMots(mot2)) {
+  return true
+  } else {
+    return false
+  }
+}
+console.log(compPhrase("haha lol kk kkk", "kk kk kkkk lolol"))
+
+//COMPARAISON DE DEUX PHRASES -- FONCTION DANS FONCTION --- ENCORE PLUS SIMPLE
+function comparaisonPhrase(mot1, mot2) {
+  return (nbMots(mot1) == nbMots(mot2));
+}
+console.log(comparaisonPhrase("je suis la", "ici"))
 
 
 
 
 
-
-
-
-
+// RACINE CARRE exercice
+function racineCarre(nombre) {
+  return Math.sqrt(nombre)
+}
+console.log(racineCarre(30))
 
 
 
@@ -470,7 +566,7 @@ tab1 = [ 5, 16, 12, 7, 13, 6, 8]
 
 
 // FREECODECAMP
-// Objets: 
+// Objets:
 
 // let dog = {
 //   "name": "Rex",                 -----> (:) pour designer des proprietes a linterieur de lobjet
@@ -478,6 +574,6 @@ tab1 = [ 5, 16, 12, 7, 13, 6, 8]
 // }
 
 // Pour acceder dans proprietes d'un objet
-// 2 manieres de faire = 
+// 2 manieres de faire =
 // 1) .
 // 2) []
