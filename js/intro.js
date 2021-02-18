@@ -439,7 +439,7 @@ let tab2 = [18, 2, 14, 11, 8, 13, 8];
 
 // tab1 = [5, 16, 12, 7, 13, 6, 8];
 
-
+// 17.02.2021
 // VERSION LONGUE MOIS et ANNEE BISSEXTILE
 // function jourAnnee(mois, annee) {
 //   let days = 0;
@@ -473,16 +473,18 @@ let tab2 = [18, 2, 14, 11, 8, 13, 8];
 
 // // VERSION COURTE
 // function daysYear(mois, annee) {
+//   mois-=1
 //   let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 //   switch (true) {
-//     case true:
-//       annee % 4 == 0 && annee % 100 != 0 || annee % 400 == 0
+//     case 2:
+//       (annee % 4 == 0 && annee % 100 != 0 || annee % 400 == 0) ;
 //       return 29; 
 //     default:
-//       return month[mois]
+//       return month[mois];
 //   }
+    
 // }
-// console.log(daysYear(3,2000))
+// console.log(daysYear(5,2000))
 
 
 // INVERSER CHAINE DE CARACTERE
@@ -505,14 +507,14 @@ function nbMots(mot) {
   }
   return nb + 1;
 }
-console.log(nbMots("je suis la"))
+// console.log(nbMots("je suis la"))
 
 
 
-function nbMotsSplit(mot) {
-  return mot.split(" ").length;
-}
-console.log(nbMotsSplit("je suis ici"))
+// function nbMotsSplit(mot) {
+//   return mot.split(" ").length;
+// }
+// console.log(nbMotsSplit("je suis ici"))
 
 
 
@@ -533,20 +535,20 @@ console.log(nbMotsSplit("je suis ici"))
 
 
 //COMPARAISON DE DEUX PHRASES -- FONCTION DANS FONCTION --- PLUS SIMPLE
-function compPhrase(mot1, mot2) {
-  if (nbMots(mot1) == nbMots(mot2)) {
-  return true
-  } else {
-    return false
-  }
-}
-console.log(compPhrase("haha lol kk kkk", "kk kk kkkk lolol"))
+// function compPhrase(mot1, mot2) {
+//   if (nbMots(mot1) == nbMots(mot2)) {
+//   return true
+//   } else {
+//     return false
+//   }
+// }
+// console.log(compPhrase("haha lol kk kkk", "kk kk kkkk lolol"))
 
 //COMPARAISON DE DEUX PHRASES -- FONCTION DANS FONCTION --- ENCORE PLUS SIMPLE
-function comparaisonPhrase(mot1, mot2) {
-  return (nbMots(mot1) == nbMots(mot2));
-}
-console.log(comparaisonPhrase("je suis la", "ici"))
+// function comparaisonPhrase(mot1, mot2) {
+//   return (nbMots(mot1) == nbMots(mot2));
+// }
+// console.log(comparaisonPhrase("je suis la", "ici"))
 
 
 
