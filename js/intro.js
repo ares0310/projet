@@ -351,7 +351,7 @@ console.log(y)*/
 // }
 // console.log(maximum(tab1))
 
-let tab2 = [18, 2, 14, 11, 8, 13, 8];
+// let tab2 = [18, 2, 14, 11, 8, 13, 8];
 
 // trouver la moyenne
 // function moyenne2(tab) {
@@ -422,8 +422,6 @@ let tab2 = [18, 2, 14, 11, 8, 13, 8];
 // }
 // console.log(indexPosition(tab2, 11))
 
-
-
 // ANNEE BISSEXTILE
 
 // function jours(mois, annee) {
@@ -464,7 +462,7 @@ let tab2 = [18, 2, 14, 11, 8, 13, 8];
 //         days = 29;
 //         return days;
 //         }
-        
+
 //         return 28;
 //   }
 //   return days;
@@ -478,48 +476,42 @@ let tab2 = [18, 2, 14, 11, 8, 13, 8];
 //   switch (true) {
 //     case 2:
 //       (annee % 4 == 0 && annee % 100 != 0 || annee % 400 == 0) ;
-//       return 29; 
+//       return 29;
 //     default:
 //       return month[mois];
 //   }
-    
+
 // }
 // console.log(daysYear(5,2000))
-
 
 // INVERSER CHAINE DE CARACTERE
 // function inversement(chaine){
 //   let ch = "";
-//   for (i=chaine.length-1; i >= 0; i--) { 
+//   for (i=chaine.length-1; i >= 0; i--) {
 //     ch += chaine[i];
 //   }
-//   return ch; 
+//   return ch;
 // }
 // console.log(inversement("abcd"))
 
 // COMPTER NOMBRE DE MOTS DANS CH DE CARACTERE
-function nbMots(mot) {
-  let nb = 0;
-  for (i = 0; i < mot.length; i++) {
-    if (mot[i] == " ") {
-      nb+=1
-    }
-  }
-  return nb + 1;
-}
+// function nbMots(mot) {
+//   let nb = 0;
+//   for (i = 0; i < mot.length; i++) {
+//     if (mot[i] == " ") {
+//       nb += 1;
+//     }
+//   }
+//   return nb + 1;
+// }
 // console.log(nbMots("je suis la"))
-
-
 
 // function nbMotsSplit(mot) {
 //   return mot.split(" ").length;
 // }
 // console.log(nbMotsSplit("je suis ici"))
 
-
-
-
-// COMPARAISON DE DEUX PHRASES --- FONCTION DANS FONCTION 
+// COMPARAISON DE DEUX PHRASES --- FONCTION DANS FONCTION
 // function comparePhrase(mot1, mot2) {
 //   let comp = "";
 //   if (nbMots(mot1) > nbMots(mot2)) {
@@ -532,7 +524,6 @@ function nbMots(mot) {
 //   return comp;
 // }
 // console.log(comparePhrase("je suis la", "kk ll kk non"))
-
 
 //COMPARAISON DE DEUX PHRASES -- FONCTION DANS FONCTION --- PLUS SIMPLE
 // function compPhrase(mot1, mot2) {
@@ -550,22 +541,92 @@ function nbMots(mot) {
 // }
 // console.log(comparaisonPhrase("je suis la", "ici"))
 
-
-
-
-
 // RACINE CARRE exercice
-function racineCarre(nombre) {
-  return Math.sqrt(nombre)
+// function racineCarre(nombre) {
+//   return Math.sqrt(nombre)
+// }
+// console.log(racineCarre(30))
+
+// // PERIMETRE RECTANLGE
+// function perimRectangle(num1, num2) {
+//   return (num1 + num1 + num2 + num2);
+// }
+// console.log(perimRectangle(6, 2))
+
+// // FONCTION CENTAINE
+// function centaine(num1, num2) {
+//   return num1 + num2 < 100;
+// }
+// console.log(centaine(52, 62))
+
+// // HEURE/MINUTE EN SECONDES
+// function secondes(heure, min) {
+//   return heure * 3600 + min * 60;
+// }
+// console.log("il y a " + secondes(3, 25) + " secondes")
+
+// // DIVISIBLE
+// function divisible (num1, num2) {
+//   return num1 % num2 == 0;
+// }
+// console.log(divisible(8, 4))
+
+// // INVERSION TABLEAU
+// function inversionTab(tab) {
+//   let num = [];
+//   for (i = tab.length-1; i>=0; i--) {
+//     num.push(tab[i]);                   // push rajoute elements
+//   }
+//   return num;
+// }
+// let tab4 = [2, 4 , 6 , 7, 8]
+// console.log(inversionTab(tab4))
+
+// TAB OBJET, AFFICHE DONNE SUR INDIVIDU
+let tabIndividu = [
+  { nom: "Xavier", prenom: "Bertrand", age: 35, revenu: 2000 },
+  { nom: "Drago", prenom: "Vladimir", age: 55, revenu: 7542 },
+  { nom: "Perez", prenom: "Damiens", age: 25, revenu: 842 },
+];
+
+// console.log(tabIndividu[1])
+
+function objets(tab) {
+  let info = "";
+  for (i = 0; i < tab.length; i++) {
+    if (tab[i].revenu < 1000) {
+      info += (tab[i].revenu / 100) * 5 + " euros d'impots ";
+    } else if (tab[i].revenu <= 2000) {
+      info += (tab[i].revenu / 100) * 7 + " euros d'impots ";
+    } else if (tab[i].revenu < 3000) {
+      info += (tab[i].revenu / 100) * 11 + " euros d'impots ";
+    } else {
+      info += (tab[i].revenu / 100) * 15 + " euros d'impots ";
+    }
+
+    if (tab[i].revenu < 1000) {
+      info+= (tab[i].revenu / 100) * 3 + " euros de secu ";
+    } else if (tab[i].revenu <= 2000) {
+      info += (tab[i].revenu / 100) * 6 + " euros de secu ";
+    } else if (tab[i].revenu < 3000) {
+      info += (tab[i].revenu / 100) * 8 + " euros de secu";
+    } else {
+      info += (tab[i].revenu / 100) * 12 + " euros de secu ";
+    }
+    if (tab[i].age <= 10) {
+      info+= " payé par un enfant "
+    } else if (tab[i].age <= 18) {
+      info+= " payé par un ado "
+    } else if (tab[i].age <= 45) {
+      info+= " payé par un adulte "
+    } else { info+= " payé par un senior "
+    }
+    info+=tab[i].nom + " " + tab[i].prenom
+    info+="\n";
+  }
+  return info;
 }
-console.log(racineCarre(30))
-
-
-
-
-
-
-
+console.log(objets(tabIndividu));
 
 // FREECODECAMP
 // Objets:
@@ -578,4 +639,3 @@ console.log(racineCarre(30))
 // Pour acceder dans proprietes d'un objet
 // 2 manieres de faire =
 // 1) .
-// 2) []
