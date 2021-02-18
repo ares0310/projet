@@ -591,42 +591,127 @@ let tabIndividu = [
 
 // console.log(tabIndividu[1])
 
-function objets(tab) {
+// EXERCICE OBJET STATISTIQUE
+// function objets(tab) {
+//   let info = "";
+//   for (i = 0; i < tab.length; i++) {
+//     if (tab[i].revenu < 1000) {
+//       info += (tab[i].revenu / 100) * 5 + " euros d'impots ";
+//     } else if (tab[i].revenu <= 2000) {
+//       info += (tab[i].revenu / 100) * 7 + " euros d'impots ";
+//     } else if (tab[i].revenu < 3000) {
+//       info += (tab[i].revenu / 100) * 11 + " euros d'impots ";
+//     } else {
+//       info += (tab[i].revenu / 100) * 15 + " euros d'impots ";
+//     }
+
+//     if (tab[i].revenu < 1000) {
+//       info+= (tab[i].revenu / 100) * 3 + " euros de secu ";
+//     } else if (tab[i].revenu <= 2000) {
+//       info += (tab[i].revenu / 100) * 6 + " euros de secu ";
+//     } else if (tab[i].revenu < 3000) {
+//       info += (tab[i].revenu / 100) * 8 + " euros de secu";
+//     } else {
+//       info += (tab[i].revenu / 100) * 12 + " euros de secu ";
+//     }
+//     if (tab[i].age <= 10) {
+//       info+= " payé par un enfant "
+//     } else if (tab[i].age <= 18) {
+//       info+= " payé par un ado "
+//     } else if (tab[i].age <= 45) {
+//       info+= " payé par un adulte "
+//     } else { info+= " payé par un senior "
+//     }
+//     info+=tab[i].nom + " " + tab[i].prenom
+//     info+="\n";
+//   }
+//   return info;
+// }
+// console.log(objets(tabIndividu));
+
+// EXERCICE OBJET STATISTIQUE (MARCHE PAS SWITCH)
+function objetSwitch(tab) {
   let info = "";
   for (i = 0; i < tab.length; i++) {
-    if (tab[i].revenu < 1000) {
-      info += (tab[i].revenu / 100) * 5 + " euros d'impots ";
-    } else if (tab[i].revenu <= 2000) {
-      info += (tab[i].revenu / 100) * 7 + " euros d'impots ";
-    } else if (tab[i].revenu < 3000) {
-      info += (tab[i].revenu / 100) * 11 + " euros d'impots ";
-    } else {
-      info += (tab[i].revenu / 100) * 15 + " euros d'impots ";
+    switch (true) {
+      case tab.age < 10:
+        info = "kid";
+        break;
+      case tab.age < 20:
+        info = "teen";
+        break;
+      case tab.age < 45:
+        info = "adult";
+        break;
+      default:
+        info = "old";
     }
-
-    if (tab[i].revenu < 1000) {
-      info+= (tab[i].revenu / 100) * 3 + " euros de secu ";
-    } else if (tab[i].revenu <= 2000) {
-      info += (tab[i].revenu / 100) * 6 + " euros de secu ";
-    } else if (tab[i].revenu < 3000) {
-      info += (tab[i].revenu / 100) * 8 + " euros de secu";
-    } else {
-      info += (tab[i].revenu / 100) * 12 + " euros de secu ";
-    }
-    if (tab[i].age <= 10) {
-      info+= " payé par un enfant "
-    } else if (tab[i].age <= 18) {
-      info+= " payé par un ado "
-    } else if (tab[i].age <= 45) {
-      info+= " payé par un adulte "
-    } else { info+= " payé par un senior "
-    }
-    info+=tab[i].nom + " " + tab[i].prenom
-    info+="\n";
   }
   return info;
 }
-console.log(objets(tabIndividu));
+console.log(objetSwitch(tabIndividu));
+
+// EXERCICE OBJET (Fonction dans fonction)
+// function objetFonc(tab) {
+//   let info = "";
+//   for (i = 0; i < tab.length; i++) {
+//     info += tab[i].nom + " " + tab[i].prenom + "\t";
+//   }
+//   return info + "\n" + impotTab(tab) + "\n" + secuTab(tab) + "\n" + ageTab(tab);
+//   // return impotTab(tab) + "\n" + secuTab(tab);
+// }
+// console.log(objetFonc(tabIndividu));
+// rattaché au dessus
+// function secuTab(tab) {
+//   result = "";
+//   for (i = 0; i < tab.length; i++) {
+//     if (tab[i].revenu < 1000) {
+//       result += (tab[i].revenu / 100) * 3 + " € de secu ";
+//     } else if (tab[i].revenu <= 2000) {
+//       result += (tab[i].revenu / 100) * 6 + " € de secu ";
+//     } else if (tab[i].revenu < 3000) {
+//       result += (tab[i].revenu / 100) * 8 + " € de secu";
+//     } else {
+//       result += (tab[i].revenu / 100) * 12 + " € de secu ";
+//     }
+//     result += "\t";
+//   }
+//   return result;
+// }
+//rattaché au dessus
+// function impotTab(tab) {
+//   let result = "";
+//   for (i = 0; i < tab.length; i++) {
+//     if (tab[i].revenu < 1000) {
+//       result += (tab[i].revenu / 100) * 5 + " € d'impots ";
+//     } else if (tab[i].revenu <= 2000) {
+//       result += (tab[i].revenu / 100) * 7 + " € d'impots ";
+//     } else if (tab[i].revenu < 3000) {
+//       result += (tab[i].revenu / 100) * 11 + " € d'impots ";
+//     } else {
+//       result += (tab[i].revenu / 100) * 15 + " € d'impots ";
+//     }
+//     result += "\t";
+//   }
+//   return result;
+// }
+// rattaché au dessus
+// function ageTab(tab) {
+//   let info = "";
+//   for (i = 0; i < tab.length; i++) {
+//     if (tab[i].age <= 10) {
+//       info += " enfant ";
+//     } else if (tab[i].age <= 18) {
+//       info += " ado ";
+//     } else if (tab[i].age <= 45) {
+//       info += "adulte ";
+//     } else {
+//       info += " senior ";
+//     }
+//   }
+//   return info;
+// }
+// console.log(impotTab(tabIndividu));
 
 // FREECODECAMP
 // Objets:
