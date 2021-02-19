@@ -629,73 +629,113 @@ let tabIndividu = [
 // }
 // console.log(objets(tabIndividu));
 
-// EXERCICE OBJET STATISTIQUE (MARCHE PAS SWITCH)
-function objetSwitch(tab) {
+// EXERCICE OBJET STATISTIQUE (SWITCH)
+function impot(revenu) {
+  switch (true) {
+    case revenu <= 1000:
+      return revenu * 0.05;
+    case revenu <= 2000:
+      return revenu * 0.07;
+    case revenu <= 3000:
+      return revenu * 0.11;
+    case revenu > 3000:
+      return revenu * 0.15;
+  }
+}
+console.log(impot(1000));
+
+function secu(revenu) {
+  switch (true) {
+    case revenu <= 1000:
+      return revenu * 0.03;
+    case revenu <= 2000:
+      return revenu * 0.06;
+    case revenu <= 3000:
+      return revenu * 0.08;
+    case revenu > 3000:
+      return revenu * 0.12;
+  }
+}
+console.log(secu(1000));
+
+function age(age) {
+  switch (true) {
+    case age <= 10:
+      return (age = "enfant");
+    case age <= 18:
+      return (age = "ado");
+    case age <= 45:
+      return (age = "adulte");
+    case age > 45:
+      return (age = "senior");
+  }
+}
+console.log(age(15));
+
+function objIndiv(tab) {
+  let i;
   let info = "";
   for (i = 0; i < tab.length; i++) {
-    switch (true) {
-      case tab.age < 10:
-        info = "kid";
-        break;
-      case tab.age < 20:
-        info = "teen";
-        break;
-      case tab.age < 45:
-        info = "adult";
-        break;
-      default:
-        info = "old";
-    }
+    nom = tab[i].nom;
+    prenom = tab[i].prenom;
+    age1 = age(tab[i].age);
+    revenu = impot(tab[i].revenu);
+    securite = secu(tab[i].revenu);
+    info += nom + "-" + prenom + "-" + age1 + "-" + revenu + "-" + securite + "\n";
   }
   return info;
 }
-console.log(objetSwitch(tabIndividu));
+console.log(objIndiv(tabIndividu))
 
 // EXERCICE OBJET (Fonction dans fonction)
 // function objetFonc(tab) {
-//   let info = "";
+//   let info = "<table><tr>";
+
 //   for (i = 0; i < tab.length; i++) {
-//     info += tab[i].nom + " " + tab[i].prenom + "\t";
+//     info += "<td>" + tab[i].nom + " " + tab[i].prenom + "</td></tr>";
 //   }
-//   return info + "\n" + impotTab(tab) + "\n" + secuTab(tab) + "\n" + ageTab(tab);
+//   info += impotTab(tab) + secuTab(tab) + ageTab(tab) + "</table";
+//   document.getElementById("demo").innerHTML = info
 //   // return impotTab(tab) + "\n" + secuTab(tab);
+
 // }
 // console.log(objetFonc(tabIndividu));
-// rattaché au dessus
+
+// // rattaché au dessus
 // function secuTab(tab) {
-//   result = "";
+//   result = "<tr>";
 //   for (i = 0; i < tab.length; i++) {
 //     if (tab[i].revenu < 1000) {
-//       result += (tab[i].revenu / 100) * 3 + " € de secu ";
+//       result += "<td>" + (tab[i].revenu / 100) * 3 + " € de secu </td>";
 //     } else if (tab[i].revenu <= 2000) {
-//       result += (tab[i].revenu / 100) * 6 + " € de secu ";
+//       result += "<td>" + (tab[i].revenu / 100) * 6 + " € de secu </td>";
 //     } else if (tab[i].revenu < 3000) {
-//       result += (tab[i].revenu / 100) * 8 + " € de secu";
+//       result += "<td>" + (tab[i].revenu / 100) * 8 + " € de secu </td>";
 //     } else {
-//       result += (tab[i].revenu / 100) * 12 + " € de secu ";
+//       result += "<td>" + (tab[i].revenu / 100) * 12 + " € de secu </td>";
 //     }
-//     result += "\t";
+//     result += "</tr>";
 //   }
 //   return result;
 // }
-//rattaché au dessus
+// //rattaché au dessus
 // function impotTab(tab) {
-//   let result = "";
+//   let result = "<tr>";
 //   for (i = 0; i < tab.length; i++) {
 //     if (tab[i].revenu < 1000) {
-//       result += (tab[i].revenu / 100) * 5 + " € d'impots ";
+//       result += "<td>" + (tab[i].revenu / 100) * 5 + " € d'impots ";
 //     } else if (tab[i].revenu <= 2000) {
-//       result += (tab[i].revenu / 100) * 7 + " € d'impots ";
+//       result += "<td>" + (tab[i].revenu / 100) * 7 + " € d'impots ";
 //     } else if (tab[i].revenu < 3000) {
-//       result += (tab[i].revenu / 100) * 11 + " € d'impots ";
+//       result += "<td>" + (tab[i].revenu / 100) * 11 + " € d'impots ";
 //     } else {
-//       result += (tab[i].revenu / 100) * 15 + " € d'impots ";
+//       result += "<td>" + (tab[i].revenu / 100) * 15 + " € d'impots ";
 //     }
-//     result += "\t";
+//     result += "</tr>";
 //   }
 //   return result;
 // }
-// rattaché au dessus
+// // rattaché au dessus
 // function ageTab(tab) {
 //   let info = "";
 //   for (i = 0; i < tab.length; i++) {

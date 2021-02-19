@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <title>Hello, world!</title>
+  </head>
+  <body onload="notes()">
+    <div class="container p-5">
+      <div class="row justify-content-around">
+        <button class="bg-warning" id="bouton">
+          <a href="https://www.google.com/" target="_blank">Google</a>
+        </button>
+        <button class="bg-warning">
+          <a class="boutona" href="https://www.microsoft.com/" target="_blank"
+            >Microsoft</a
+          >
+        </button>
+        <button class="bg-warning">
+          <a class="boutona" href="https://www.apple.com/" target="_blank"
+            >Apple</a
+          >
+        </button>
+        <button class="bg-warning bouton1">
+          <a class="boutona" href="https://www.samsung.com/" target="_blank"
+            >Samsung</a
+          >
+        </button>
+        <button onclick="changeElement()" class="bg-success">
+          <a>change content</a>
+        </button>
+        <button class="bg-success" id="bouton1">
+          <a>change content class</a>
+        </button>
+      </div>
+    </div>
+    <div>
+      <button
+        type="button"
+        id="bouton2"
+        class="btn btn-lg btn-danger"
+        data-toggle="popover"
+        title="Popover title"
+        data-content="And here's some amazing content. It's very engaging. Right?"
+      >
+        Click to toggle popover
+      </button>
+      <button id="boutonPopOver" class="bg-secondary">
+        <a>Change popover</a>
+      </button>
+    </div>
+
+    <div class="container">
+      <table class="row">
+        <tr>
+          <td>John</td>
+          <td class="note">18</td>
+        </tr>
+        <tr>
+          <td>Beverly</td>
+          <td class="note">8</td>
+        </tr>
+        <tr>
+          <td>Bjorn</td>
+          <td class="note">10</td>
+        </tr>
+        <tr>
+          <td>Aaron</td>
+          <td class="note">5</td>
+        </tr>
+        <tr>
+          <td>Kuzak</td>
+          <td class="note">9</td>
+        </tr>
+      </table>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">NOTE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td class="note2">11</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td class="note2">8</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td class="note2">16</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Gordon</td>
+          <td>Ramzes</td>
+          <td class="note2">9</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      //fonction onclick
+      function changeElement() {
+        document
+          .getElementById("bouton")
+          .setAttribute(
+            "onclick",
+            "location.href='https://www.w3schools.com/'"
+          );
+        document.getElementById("bouton").innerHTML = "W3school";
+      }
+    </script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#bouton1").click(function () {
+          $(".boutona").attr("href", "https://www.w3schools.com/");
+          $(".boutona").text("w3school");
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover();
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#boutonPopOver").click(function () {
+          $("#bouton2").attr("data-content", "hahaha");
+        });
+      });
+    </script>
+    <script>
+      $(".note").each(function (index) {
+        // console.log(this.innerHTML)
+        if (this.innerHTML < 10) {
+          $(this).css("background-color", "red");
+        } else if (this.innerHTML >= 10 && this.innerHTML < 15) {
+          $(this).css("background-color", "blue");
+        } else {
+          $(this).css("background-color", "green");
+        }
+      });
+    </script>
+
+    <script>
+      function notes() {
+        // let liste = $(".table td:last-child");
+        let note;
+        $(".table td:last-child").each(function () {
+          // --------> $(".table td:last-child") a remplacé variable liste (commenté en ligne 170) ==== optimisation
+          note = $(this).text();
+          classeNote=getClass(note);
+          $(this).html('<button class="btn btn-'+ classeNote + '">' +note+ '</button>')
+        });
+      }
+      function getClass(note) {
+        switch (
+          true // comparaison
+        ) {
+          case note < 10:
+            return "danger";
+          case note >= 10 && note <= 15:
+            return "info";
+          default:
+            return "success";
+        }
+      }
+    </script>
+  </body>
+</html>
