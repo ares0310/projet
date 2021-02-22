@@ -8,12 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/test.css" />
 
     <title>Hello, world!</title>
   </head>
   <body onload="notes()">
-    <div class="container p-5">
+    <!-- <div class="container p-5">
       <div class="row justify-content-around">
         <button class="bg-warning" id="bouton">
           <a href="https://www.google.com/" target="_blank">Google</a>
@@ -85,47 +85,62 @@
 
     <div class="border col-md-2 bg-primary content-box">
       <p class="content-before">Click to see more</p>
-      <p class="content-after">hthththhththhththhthththt</p> <!-- DIsplay none sur CSS à mettre et faire apparaitre en animate-->
-
-    </div>
+      <p class="content-after">hthththhththhththhthththt</p> -->
+    <!-- DIsplay none sur CSS à mettre et faire apparaitre en animate-->
+    <!-- </div>
 
     <table class="table">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">NOTE</th>
+
+          <th scope="col">Note</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">1</th>
           <td>Mark</td>
-          <td>Otto</td>
-          <td class="note2">11</td>
+
+          <td>8</td>
         </tr>
         <tr>
           <th scope="row">2</th>
           <td>Jacob</td>
-          <td>Thornton</td>
-          <td class="note2">8</td>
+
+          <td>12</td>
         </tr>
         <tr>
           <th scope="row">3</th>
           <td>Larry</td>
-          <td>the Bird</td>
-          <td class="note2">16</td>
+
+          <td>17</td>
         </tr>
         <tr>
           <th scope="row">4</th>
-          <td>Gordon</td>
-          <td>Ramzes</td>
-          <td class="note2">9</td>
+          <td>Harry</td>
+
+          <td>9</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Garry</td>
+
+          <td>15</td>
         </tr>
       </tbody>
-    </table>
-    <script>
+    </table> -->
+    <img class="img-click" id="img1" src="images/image.jpg" />
+    <img class="img-click" id="img2" src="images/workplace.jpg" />
+    <img
+      class="img-click"
+      id="img3"
+      src="images/grapefruit-slice-332-332.jpg"
+    />
+    <img class="img-click" id="img4" src="images/workplace.jpg" />
+
+    <!-- <script>
       //fonction onclick
       function changeElement() {
         document
@@ -163,13 +178,19 @@
     <script>
       $(".note").each(function (index) {
         // console.log(this.innerHTML)
-        console.log(this)
+
         if (this.innerHTML < 10) {
-          $(this).html('<button class="bg-warning">'+ this.innerHTML + '</button>');
+          $(this).html(
+            '<button class="bg-warning">' + this.innerHTML + "</button>"
+          );
         } else if (this.innerHTML >= 10 && this.innerHTML < 15) {
-          $(this).html('<button class="bg-primary">'+ this.innerHTML + '</button>');
+          $(this).html(
+            '<button class="bg-primary">' + this.innerHTML + "</button>"
+          );
         } else {
-          $(this).html('<button class="bg-success">'+ this.innerHTML + '</button>');
+          $(this).html(
+            '<button class="bg-success">' + this.innerHTML + "</button>"
+          );
         }
       });
     </script>
@@ -179,38 +200,69 @@
           $(this).fadeTo(1000, 0.5);
         });
       });
-    </script>
-
+    </script> -->
     <script>
+            $(document).ready(function(){
+              $("#img1").click(function(){
+                alert("The paragraph was clicked.");
+      });
+            });
+    </script>
+    <!-- <script>       // fait le 22.02.2021
+      //onload sur body !!!!
       function notes() {
-        // let liste = $(".table td:last-child");
-        let note;
-        $(".table td:last-child").each(function () { // --------> $(".table td:last-child") a remplacé variable liste (commenté en ligne -2) ==== optimisation
-          note = $(this).text();      // attribue à note = la valeur grace au .text
-          
-          $(this).html('<button class="btn btn-' + getClass(note) +'">' + note + "</button>" // change le html de this
-          );
+        // let liste = $("td:last-child");
+        $("td:last-child").each(function () {
+          $(this).html('<button type="button" class="btn btn-'+ getNotes($(this).text()) +'">'+ $(this).text() +'</button>');
         });
       }
-      function getClass(note) {
-        switch (true)
-        {
+      function getNotes(note) {
+        switch (true) {
           case note < 10:
             return "danger";
-          case note >= 10 && note <= 15:
-            return "info";
+          case note <= 15:
+            return "info";         
           default:
             return "success";
         }
       }
+    </script> -->
+
+    <script>
+        function notes() {
+          // let liste = $(".table td:last-child");
+          let note;
+          $(".table td:last-child").each(function () {
+            // --------> $(".table td:last-child") a remplacé variable liste (commenté en ligne -2) ==== optimisation
+            note = $(this).text(); // attribue à note = la valeur grace au .text
+
+            $(this).html(
+              '<button class="btn btn-' +
+                getClass(note) +
+                '">' +
+                note +
+                "</button>" // change le html de this
+            );
+          });
+        }
+        function getClass(note) {
+          switch (true) {
+            case note < 10:
+              return "danger";
+            case note >= 10 && note <= 15:
+              return "info";
+            default:
+              return "success";
+          }
+        }
+      
     </script>
     <script>
-      $(document).ready(function(){
-        $(".content-box").click(function(){
-          $(this).animate({width: "500px", height: "400px"});
-          $(".content-after").show().animate({opacity: 1}, 3000);
+      $(document).ready(function () {
+        $(".content-box").click(function () {
+          $(this).animate({ width: "500px", height: "400px" });
+          $(".content-after").show().animate({ opacity: 1 }, 3000);
         });
-        
       });
     </script>
   </body>
