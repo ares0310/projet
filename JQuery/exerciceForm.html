@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <form class="container pb-3 bg-info">
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Produit</label>
+          <input class="form-control" id="input1" placeholder="Produit" />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Marque</label>
+          <input
+            type="text"
+            class="form-control"
+            id="input2"
+            placeholder="Marque"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="inputAddress">Modèle</label>
+          <input
+            type="text"
+            class="form-control"
+            id="input3"
+            placeholder="hp, apple, samsung..."
+          />
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="inputAddress2">Spécification</label>
+          <input
+            type="text"
+            class="form-control"
+            id="input4"
+            placeholder="Autres suggestions"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check"></div>
+      </div>
+      <div class="pb-3">
+        <button id="valid" type="button" class="btn btn-primary">
+          Générer
+        </button>
+        <button type="reset" class="btn btn-warning">Réinitialiser</button>
+      </div>
+      <textarea
+        type="textarea"
+        class="form-control"
+        id="retour"
+        placeholder="Retour"
+      ></textarea>
+    </form>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#valid").click(function () {
+          let result =
+            $("#input1").val() +
+            " " +
+            $("#input2").val() +
+            "\n" +
+            $("#input1").val() +
+            " " +
+            $("#input3").val() +
+            "\n" +
+            $("#input2").val() +
+            " " +
+            $("#input3").val() +
+            "\n" +
+            $("#input3").val() +
+            " " +
+            $("#input4").val();
+          $("#retour").val(result);
+        });
+      });
+    </script>
+  </body>
+</html>

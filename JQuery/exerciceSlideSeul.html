@@ -16,17 +16,17 @@
     <div class="container-fluid">
       <div class="row">
 
-        <div class="border col-md-9 main-image">
+        <div class="col-md-9 main-image">
           <img class="big-img" src="images/image.jpg" />
         </div>
         <div class="col-md-3">
-          <p id="parVide"></p>
+          <p id="parVide">description 1</p>
         </div>
       </div>
     </div>
         
       
-    <div class="col-md-12 border mini-image">
+    <div class="col-md-12 mini-image">
       <img class="img-click" id="img1" src="images/image.jpg" /><p>description 1</p>
       <img class="img-click" id="img2" src="images/workplace.jpg" /> <p>description 2</p>
       <img
@@ -40,9 +40,18 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
-    <script>
+    <!-- <script>
       $(document).ready(function () {
         $(".mini-image img").click(function () {
+          $(".main-image img").attr("src", $(this).attr("src"));
+          $("#parVide").text($(this).next().text());
+        });
+      });
+    </script> -->
+    <!-- REFAIRE l'EXERCICE -->
+    <script>
+      $(document).ready(function(){
+        $(".mini-image img").click(function(){
           $(".main-image img").attr("src", $(this).attr("src"));
           $("#parVide").text($(this).next().text());
         });
