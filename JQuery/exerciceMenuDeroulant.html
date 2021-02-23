@@ -18,10 +18,10 @@
         <div class="form-group">
           <label for="exampleFormControlSelect1">Choix du plat</label>
           <select class="form-control" id="choix1">
-            <option>--Choisissez votre plat--</option>
-            <option id="opt1" value="sandwich">Sandwich</option>
-            <option id="opt2">Pizza</option>
-            <option id="opt3">Burger</option>
+            <option class="choix2">--Choisissez votre plat--</option>
+            <option class="choix2" value="sandwich">Sandwich</option>
+            <option class="choix2" value="pizza">Pizza</option>
+            <option class="choix2" value="burger">Burger</option>
           </select>
         </div>
 
@@ -30,87 +30,94 @@
           <div id="ingrSandwich">
             <div class="form-check sandwich">
               <input
-                class="form-check-input"
+                class="form-check-input opt1"
                 type="checkbox"
-                value=""
+                value="sandwich"
                 id="flexCheckDefault1"
               />
               <label class="form-check-label" for="flexCheckDefault"> 1 </label>
             </div>
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input opt1"
                 type="checkbox"
-                value=""
+                value="sandwich"
                 id="flexCheckDefault2"
               />
               <label class="form-check-label" for="flexCheckDefault"> 2 </label>
             </div>
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input opt1"
                 type="checkbox"
-                value=""
+                value="sandwich"
                 id="flexCheckChecked3"
               />
               <label class="form-check-label" for="flexCheckChecked"> 3 </label>
             </div>
           </div>
+
           <!--PIZZA INGREDIENTS-->
-          <div>
+          <div id="ingrPizza">
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input opt1"
                 type="radio"
                 name="flexRadioDefault"
+                value="pizza"
                 id="flexRadioDefault1"
               />
               <label class="form-check-label" for="flexRadioDefault1"> 1 </label>
             </div>
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input opt1"
                 type="radio"
                 name="flexRadioDefault"
+                value="pizza"
                 id="flexRadioDefault2"
               />
               <label class="form-check-label" for="flexRadioDefault2"> 2 </label>
             </div>
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input opt1"
                 type="radio"
                 name="flexRadioDefault"
+                value="pizza"
                 id="flexRadioDefault3"
               />
               <label class="form-check-label" for="flexRadioDefault3"> 3 </label>
             </div>
           </div>
           <!--BURGER TAILLE-->
-          <div>
+          <div id="ingrBurger">
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input opt1"
                 type="radio"
                 name="flexRadioDefault"
+                value="burger"
                 id="flexRadioDefault4"
               />
               <label class="form-check-label" for="flexRadioDefault4"> 1 </label>
             </div>
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input opt1"
                 type="radio"
                 name="flexRadioDefault"
+                value="burger"
                 id="flexRadioDefault5"
               />
               <label class="form-check-label" for="flexRadioDefault5"> 2 </label>
             </div>
             <div class="form-check">
               <input
-                class="form-check-input"
+                class="form-check-input opt1"
                 type="radio"
                 name="flexRadioDefault"
+                value="burger"
                 id="flexRadioDefault6"
               />
               <label class="form-check-label" for="flexRadioDefault6"> 3 </label>
@@ -150,9 +157,17 @@
       $(document).ready(function () {
         $("#hideIngr").hide()
         $("#choix1").change(function () {
-          $().val()
-
+          let choice = $("#hideIngr input").attr("val", $("#choix2").val());
+          console.log(choice);
+          $("#hideIngr").show();
         });
+        // $("#hideIngr").hide()
+        // $("#choix1").change(function () {
+        //   let choice = $("#hideIngr input").attr("val", $(this).val());
+        //   console.log(choice);
+        // });
+        
+        
       });
     </script>
   </body>
