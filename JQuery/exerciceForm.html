@@ -65,6 +65,12 @@
         placeholder="Retour"
       ></textarea>
     </form>
+    <p>
+      couleur <span class="cow_color">Bleue</span>
+    </p>
+    <p>Changer la couleur  : </p>
+    <input id="input_color" type="text">
+    <button id="button_change" class="btn btn-success">Changer !</button>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -89,6 +95,13 @@
             " " +
             $("#input4").val();
           $("#retour").val(result);
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#button_change").click(function(){
+          $(".cow_color").text($("#input_color").val());
         });
       });
     </script>
