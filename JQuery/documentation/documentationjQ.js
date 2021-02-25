@@ -15,3 +15,11 @@
 //   });
 
 // Jquery selector = CSS selector
+
+
+
+
+
+// parcours tableau Jquery
+// $.each(response, function(){                            
+//    tab.push(this.userId)

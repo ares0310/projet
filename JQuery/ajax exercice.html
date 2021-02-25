@@ -9,37 +9,53 @@
     />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
 
     <title>Ajax</title>
   </head>
   <body>
     <br />
-    
 
-    <button type="button" onclick="requete()" class="btn btn-primary">
+    <button id="btn1" type="button" onclick="requete()" class="btn btn-primary">
+      <!--onclick = "..()" methode javascript  -->
       Primary
     </button>
-
+    <p id="par1"></p>
+    <div id="tb1"></div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
 
     <script>
       function requete() {
-        let request = $.ajax({                                        // mis dans variable pour pouvoir le manipuler plus facilement
-          url: "https://jsonplaceholder.typicode.com/posts/",         // lien backend         peut se changer en "comments"
-          method: "GET",                                              // recupere donnees   ("post" donne des donnees) get (= obtenir), post (=envoyer), patch (= maj une partie), put, delete (=supprime).
-          dataType: "json",                                           // quel type de donnees   (pas toujours json, ici car lien renvoie json)
+        let request = $.ajax({
+          url: "https://jsonplaceholder.typicode.com/posts/", // lien renvoie contenu json
+          method: "GET",
+          dataType: "json", // json --- get ou post ----- tableau d'objet
         });
 
+        //  exercice sortir les userId de l'url plus haut
         request.done(function (response) {
-          // traitement ici
+          let tab = []; // recuperer les userId depuis le lien en console.log()
+
+          $.each(response, function () {
+            // console.log(this.userId)
+            tab.push(this.userId);
+          });
+          let x = Array.from(new Set(tab)); // methode Youssef
+          // $("#par1").text(x);
+          $("#tb1").html(
+            "<table class='table table-striped table-dark'><thead><tr><th>#</th></tr></thead><tbody id='tableau1'></tbody></table>"
+          );
+          let txt = "";       
+          let i=0;
+          for (i=0; i < x.length; i++) {
+            txt += ("<tr><th>" + x[i] + "</th></tr>");
+          }
+          $("#tableau1").html(txt)
         });
 
         request.fail(function (http_error) {
           //Code à jouer en cas d'éxécution en erreur du script du PHP
-
           let server_msg = http_error.responseText;
           let code = http_error.status;
           let code_label = http_error.statusText;
