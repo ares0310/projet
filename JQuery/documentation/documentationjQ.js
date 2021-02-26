@@ -20,6 +20,13 @@
 
 
 
-// parcours tableau Jquery
+
 // $.each(response, function(){                            
 //    tab.push(this.userId)
+// parcours tableau Jquery
+
+// sinon
+
+// $("selector").each()
+
+
