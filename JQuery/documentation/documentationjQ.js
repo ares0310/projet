@@ -30,3 +30,16 @@
 // $("selector").each()
 
 
+// ENLEVER LES DOUBLONS
+// indexOf 
+//exemple:
+
+// function elimineDoublon(tab) {                    // pour eviter de faire une fonction en plus, dans l'autre fichier "ajax exercice" Array.from new set fait l'affaire
+//         let tab2 = [];
+//         for (i = 0; i < tab.length; i++) {       // creer une boucle
+//           if (tab2.indexOf(tab[i]) === -1) {
+//             tab2.push(tab[i]);
+//          }
+//        }
+//          return tab2;
+//      }
