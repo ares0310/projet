@@ -9,9 +9,9 @@
     />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
-    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+    <link rel="stylesheet" href="css/styles.css" />
 
-    <title>exepmle</title>
+    <title>exemple</title>
   </head>
   <body onload="requete()">
     <br />
@@ -64,11 +64,43 @@
             tab[i].titre +
             "</h5>";
           chaine +=
-            '<button class="btn btn-primary" id="' +
+            '<button class="btn btn-primary commentaires" id="' +
             tab[i].id +
             '">commentaires</button ></div></div>';
         }
         return chaine;
+      }
+
+      function commentaires() {
+        // https://jsonplaceholder.typicode.com/posts/1/comments
+        $(".commentaires").click(function () {
+          // console.log("com suite au click");
+          let id=$(this).attr("id");
+           //console.log(id);
+          let request = $.ajax({
+            url: "https://jsonplaceholder.typicode.com/posts/"+id+"/comments",
+            method: "GET",
+            dataType: "json",
+          });
+
+          request.done(function (response) {
+            //console.log(response);
+            let commentaires="<ol>";
+            $.each(response, function () {
+                commentaires+='<li>'+this.body+'</li>';
+            });
+            commentaires+="</ol>";
+            //console.log(commentaires);
+            $("#"+id).after(commentaires);
+          });
+
+          request.fail(function (http_error) {
+            let server_msg = http_error.responseText;
+            let code = http_error.status;
+            let code_label = http_error.statusText;
+            alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
+          });
+        });
       }
     </script>
   </body>
