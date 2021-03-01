@@ -13,52 +13,76 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="css/magnify.css" />
 
     <title>chargement</title>
   </head>
   <body class="container">
-    <p class="pt-5" id="par1">Chargement en cours</p>
-
-    <button class="btn btn-primary" id="btn1">click to animate</button>
-
-    <div id="typed-strings">
-      <p>Typed.js is a <strong>JavaScript</strong> library.</p>
-      <p>It <em>types</em> out sentences.</p>
+    <header></header>
+    <div class="row">
+      <button class="btn btn-dark col-md-6" id="btn1">Who am I ?</button>
+      <a class="col-md-6" href="images/EXIL.jpg">
+        <img src="images/EXIL.jpg" class="w-100 zoom" />
+      </a>
     </div>
-    <span id="typed"></span>
+    <div id="typed-strings">
+      <p>Je suis <span id="typed"></span></p>
+    </div>
 
     <div id="newWord"></div>
+
+    <audio controls id="music" >
+      <source src="Matrix.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio> <br>
+
+    <button class="btn btn-dark" id="play">You want to play ?</button>
+    <button class="btn btn-dark m-5" id="play2">2021</button>
+    <h2 id="play3">2020 WON</h2>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://unpkg.com/tone@13.8.25/build/Tone.js"></script>
+    <script src="js/jquery.magnify.js"></script>
+
     <script>
       $(document).ready(function () {
         $("#btn1").click(function () {
-          let motDiv = $("#par1").text();
-          // $("#newWord").html("<p>" +motDiv+ "</p");
-          $("#par1").html(
-            "<p class='animate__animated animate__bounce' id='par1'>Chargement en cours</p>"
-          );
+          $("#play").css("display", "block")
+          let options = new Typed("#typed", {
+            strings: [
+              "musicien.",
+              "intermittent du spectacle.",
+              "<b>développeur web.</b>",
+            ],
+            typeSpeed: 90,
+            backSpeed: 40,
+            loop: false,
+          });
         });
+        
       });
-
-      function diviseMot(tab) {
-        let a = "";
-        let i;
-        for (i = 0, i < tab.length; i++; ) {
-          a += $(a).html("<span>" + tab[i] + "</span>");
-        }
-        return a;
-      }
     </script>
     <script>
-      var options = ("#typed",{
-        strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-        typeSpeed: 40,
+      $(document).ready(function () {
+        $(".zoom").magnify();
       });
-      var typed = new Typed('.element', options);
+    </script>
+    <script>
+      $(document).ready(function (){
+        $("#play").click(function(){
+          $("#play2").css("display", "block")
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function (){
+        $("#play2").click(function(){
+          $("#play3").css("display", "block")
+        });
+      });
     </script>
   </body>
 </html>
