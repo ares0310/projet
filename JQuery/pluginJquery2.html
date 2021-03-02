@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <link rel="stylesheet" href="css/rotating-slider.min.css" />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="rotating-slider">
+      <ul class="slides border">
+        <li>
+          <div class="inner">
+            <h2>jQuery Rotating Slider</h2>
+            <p>A fancy rotator plugin.</p>
+          </div>
+        </li>
+        <li>
+          <div class="inner"></div>
+        </li>
+        <li>
+          <div class="inner">
+            <h2>Slide 2</h2>
+            <p>This is slide 2</p>
+          </div>
+        </li>
+        <li>
+          <div class="inner"></div>
+        </li>
+        <li>
+          <div class="inner">
+            <h2>Slide 3</h2>
+            <p>This is slide 3</p>
+          </div>
+        </li>
+        <li>
+          <div class="inner">
+            <h2>Slide 4</h2>
+            <p>This is slide 4</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery.rotating-slider.js"></script>
+    <!-- <script>
+      $(function () {
+        $(".rotating-slider").rotatingSlider();
+      });
+    </script> -->
+    <script>
+      $(function () {
+        $(".rotating-slider").rotatingSlider({
+          // auto play
+          autoRotate: true,
+
+          // auto play interval
+          autoRotateInterval: 6000,
+
+          // is draggable?
+          draggable: true,
+
+          // slider controls
+          directionControls: true,
+          directionLeftText: "&lsaquo;",
+          directionRightText: "&rsaquo;",
+
+          // animation speed
+          rotationSpeed: 750,
+
+          // size of slider
+          slideHeight: 360,
+          slideWidth: 480,
+        });
+      });
+    </script>
+  </body>
+</html>
