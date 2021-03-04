@@ -14,13 +14,53 @@
   color: white;
 }
 
+.check {
+    background-color: white;
+    color: #FD1E5F;
+}
+
+.iconeGoutte {
+    background-color: white;
+    color: #073E77;
+}
+
+.grosChiffre{
+    font-size : 50px;
+}
+
+h1 {
+    color: black;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size : 60px;
+    
+}
+
+h3 {
+    color: black;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size : 40px;
+}
+
+.fondGris {
+    background-color: #FAFAFA;
+}
+
+.counterWhite h3 {
+    color: white;
+}
+
 ul {
     list-style-type: none;
 }
 
 .forfait3 {
     height: 400px;
+    box-shadow: 12px 12px 10px 10px rgba(244, 244, 244, 244)
 }
+
+
 
 .ovalImage {
     overflow: hidden;
@@ -33,13 +73,38 @@ ul {
 }
 
 button {
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: #FB1F5C;
     border: none;
     color: white;
     padding: 10px;
 }
 
+#logoAfpa {
+    width: 80px;
+    margin-right: 200px;
+}
+
+span {
+    margin: 5px;
+    background-color: black;
+    border-radius: 50% 50% 50% 50%;
+}
+
+.text-box {
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	right: 15%;
+	color: #fff;
+	text-align: center;
+	transform: translateY(-50%);
+}
+
+#doctorImg {
+    width: 100%;
+    height: 1000px;
+}
 
 /* Slider */
 
