@@ -1,46 +1,7 @@
-.bandeBleue {
-  background: #043d72;
-  height: auto;
-  color: white;
+h2{
+  text-align:center;
+  padding: 20px;
 }
-
-#bg-image {
-    background-image: url("images/image1.jpg");
-}
-
-.fondDegrade {
-  height: 400px;
-  background-image: linear-gradient(to right, #43366C, #D11844);
-  color: white;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.forfait3 {
-    height: 400px;
-}
-
-.ovalImage {
-    overflow: hidden;
-    height : 100px;
-}
-
-.ovalImage img {
-    margin-top: -50px;
-    border-radius: 0% 0% 50% 50%;
-}
-
-button {
-    border-radius: 20px;
-    background-color: #FB1F5C;
-    border: none;
-    color: white;
-    padding: 10px;
-}
-
-
 /* Slider */
 
 .slick-slide {
