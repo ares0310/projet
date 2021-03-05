@@ -1,3 +1,9 @@
+.navigation {
+    position: absolute;
+    margin: 4rem;
+    left: 180px;
+}
+
 .bandeBleue {
   background: #043d72;
   height: auto;
@@ -28,6 +34,8 @@
     font-size : 50px;
 }
 
+
+
 h1 {
     color: black;
     font-family: 'Anton', sans-serif;
@@ -56,20 +64,59 @@ ul {
 }
 
 .forfait3 {
-    height: 400px;
+    height: 500px;
     box-shadow: 12px 12px 10px 10px rgba(244, 244, 244, 244)
 }
 
-
-
-.ovalImage {
-    overflow: hidden;
-    height : 100px;
+.titreBanniere {
+    /* position: absolute; */
+    padding-left: 100px;
+    padding-top: -200px;
 }
 
 .ovalImage img {
     margin-top: -50px;
     border-radius: 0% 0% 50% 50%;
+    overflow: hidden;
+    height : 200px;
+    /* position: absolute; */
+}
+
+.listeBanniere {
+    /* padding-top: 150px; */
+}
+
+p b {
+    font-size: 50px;
+}
+
+.docPhoto {
+    height: 500px;
+    background-color: white;
+    color: black;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 10px;
+}
+
+.nomDocteur p {
+    color: #FF62B0
+}
+
+.nomDocteur span {
+    background-color: white;
+    opacity: 0.5;
+}
+
+.photoDocteurOval {
+    border-radius: 0% 0% 0% 20%;
+}
+
+.formulaire {
+    margin-top: -2rem;
+    background-color: white;
+    box-shadow: 0px 0px 5px 6px rgba(244, 244, 244, 244)
+
 }
 
 button {
@@ -78,6 +125,12 @@ button {
     border: none;
     color: white;
     padding: 10px;
+}
+
+.iconDoctor{
+    background: none;
+    color: #FB1F5C;
+    font-size: 24px;
 }
 
 #logoAfpa {
@@ -104,6 +157,29 @@ span {
 #doctorImg {
     width: 100%;
     height: 1000px;
+}
+
+.articles {
+    box-shadow: 0px 0px 10px 6px rgba(244, 244, 244, 244)
+}
+
+
+footer span{
+    background: none;
+    color: #FB1F5C;
+}
+
+footer h6 {
+    font-size: larger;
+}
+
+.newsLetter {
+    /* z-index: 5; */
+    background-color: white;
+}
+
+.blocBas {
+    padding-top: 200px;
 }
 
 /* Slider */
